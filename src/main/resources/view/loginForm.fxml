@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="paneWelcomePageLoadSpace" prefHeight="474.0" prefWidth="408.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.service.mds2.controller.LoginFormController">
+   <children>
+      <Text fill="#333333" layoutX="39.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" wrappingWidth="69.33673095703125">
+         <font>
+            <Font name="Times New Roman Bold" size="25.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtUserName" focusColor="#0d0d0d" labelFloat="true" layoutX="87.0" layoutY="144.0" prefHeight="29.0" prefWidth="240.0" promptText="username" unFocusColor="#0b0a0a">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPassword" focusColor="#0d0d0d" labelFloat="true" layoutX="87.0" layoutY="248.0" prefHeight="29.0" prefWidth="240.0" promptText="password" unFocusColor="#0b0a0a">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXTextField>
+      <Text fx:id="lblForgotPassWord" fill="#333333" layoutX="222.0" layoutY="310.0" onMouseClicked="#clickForgotPassword" strokeType="OUTSIDE" strokeWidth="0.0" text="forgot password ?" underline="true" wrappingWidth="111.73675537109375">
+         <font>
+            <Font name="Times New Roman" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Text>
+      <JFXButton fx:id="btnLogin" layoutX="269.0" layoutY="345.0" onAction="#btnLoginClick" ripplerFill="#a5efdf" style="-fx-background-color: A6CDC6; -fx-background-radius: 12;" text="Login">
+         <font>
+            <Font name="Times New Roman Bold" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</Pane>

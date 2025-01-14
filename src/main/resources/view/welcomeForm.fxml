@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="688.0" prefWidth="1254.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.service.mds2.controller.WelcomeFormController">
+   <children>
+      <ImageView fitHeight="709.0" fitWidth="1262.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Leonardo_Phoenix_09_A_serene_light_blue_background_dominates_t_3.jpg" />
+         </image>
+      </ImageView>
+      <Pane fx:id="paneWelcomePageLoadSpace" layoutX="405.0" layoutY="82.0" prefHeight="474.0" prefWidth="408.0" stylesheets="@../styleSheet/Transparent.css">
+         <styleClass>
+            <String fx:value="grid-pane" />
+            <String fx:value="root" />
+         </styleClass>
+      </Pane>
+   </children>
+</AnchorPane>
