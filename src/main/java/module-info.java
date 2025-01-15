@@ -5,6 +5,9 @@ module com.assignment.service.mds2 {
     requires java.sql;
     requires java.desktop;
     requires static lombok;
+    requires mysql.connector.j;
+    requires java.mail;
+    requires com.google.protobuf;
 
 
     opens com.assignment.service.mds2 to javafx.fxml;
