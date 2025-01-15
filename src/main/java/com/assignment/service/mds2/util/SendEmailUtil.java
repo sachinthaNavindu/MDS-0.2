@@ -11,8 +11,8 @@ import java.util.concurrent.Executors;
 
 public class SendEmailUtil {
 
-    private static final String username = "navindus485@gmail.com";
-    private static final String password = "oere qtjo xrlm beyn";
+    private static final String username = "yourEmail";
+    private static final String password = "profilepasswordCode";
 
     private static final ExecutorService executorService = Executors.newFixedThreadPool(10);
 
