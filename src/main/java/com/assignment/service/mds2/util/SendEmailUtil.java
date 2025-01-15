@@ -12,7 +12,7 @@ import java.util.concurrent.Executors;
 public class SendEmailUtil {
 
     private static final String username = "yourEmail";
-    private static final String password = "profilepasswordCode";
+    private static final String password = "App Password";
 
     private static final ExecutorService executorService = Executors.newFixedThreadPool(10);
 
