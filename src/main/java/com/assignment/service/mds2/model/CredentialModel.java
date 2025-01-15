@@ -1,6 +1,8 @@
 package com.assignment.service.mds2.model;
 
 import com.assignment.service.mds2.db.DBConnection;
+import com.assignment.service.mds2.dto.CredentialDto;
+import com.assignment.service.mds2.util.SqlUtil;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,7 +14,7 @@ public class CredentialModel {
 
     public boolean loginCheck(String userName,String password) throws SQLException {
         Connection connection = DBConnection.getInstance().getConnection();
-        String sql = "SELECT AES_DECRYPT(password,'your_secret_key')AS decrypted_password FROM credential2 WHERE userName=?";
+        String sql = "SELECT AES_DECRYPT(password,'your_secret_key')AS decrypted_password FROM credential WHERE userName=?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1,userName);
         ResultSet resultSet = preparedStatement.executeQuery();
@@ -39,6 +41,17 @@ public class CredentialModel {
                 adminIdEmptyUser.add(resultSet.getString("admin_id"));
             }
             return adminIdEmptyUser;
+    }
+
+    public boolean saveNewUserAdmin(CredentialDto credentialDto) throws SQLException {
+        String sql = "INSERT INTO credential (userName, admin_id, password, recover_Email) VALUES (?, ?, AES_ENCRYPT(?, ?), ?)";
+        return SqlUtil.execute(sql,
+                    credentialDto.getUsername(),
+                    credentialDto.getAdminId(),
+                    credentialDto.getPassword(),
+                    "your_secret_key",
+                    credentialDto.getRecoverEmail()
+                );
     }
 }
 

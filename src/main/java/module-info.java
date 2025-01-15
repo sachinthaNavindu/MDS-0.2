@@ -4,6 +4,7 @@ module com.assignment.service.mds2 {
     requires com.jfoenix;
     requires java.sql;
     requires java.desktop;
+    requires static lombok;
 
 
     opens com.assignment.service.mds2 to javafx.fxml;
